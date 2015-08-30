@@ -11,7 +11,7 @@ namespace PrismDemo.Services
 {
   public  class ServicesPhoto : IServicesPhoto
     {
-
+         // get recent photo from flickr api per 50 photos
         public async Task<List<Models.Photo>> GetRecentPhoto(int count)
         {
             double widh = 500;
@@ -49,6 +49,8 @@ namespace PrismDemo.Services
 
 
                         item.source = baseflickr;
+
+                        //size of the image should be half of the screen
                         item.width = widh / 2 - 10;
                         item.search = false;
                         Statique.listphotodesc.Add(item);
@@ -69,6 +71,7 @@ namespace PrismDemo.Services
             }
         }
 
+      // search photo by an input text from the user.
         public async Task<List<Photo>> SearchPhoto(int count, string searchphoto)
         {
 
@@ -129,7 +132,7 @@ namespace PrismDemo.Services
  
 
 
-      
+        // we check for the existing Geolocation of the photo for each swip of photo
         public async Task<Location> CheckforGeolocation(string photo_id)
         {
             GeoPhotoData flickrdata;

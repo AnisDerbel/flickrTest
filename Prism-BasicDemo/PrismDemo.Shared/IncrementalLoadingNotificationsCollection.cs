@@ -69,6 +69,7 @@ namespace PrismDemo
         {
            if(_searchphoto=="")
            {
+               // get recent photo without searching
                notifications = await _notificationService.GetRecentPhoto(_photoStartIndex);
 
            }
@@ -80,6 +81,7 @@ namespace PrismDemo
                    Remove(item);
                }
 
+               // search on specific photos
                notifications = await _notificationService.SearchPhoto(_photoStartIndex,_searchphoto);
                _mainviewmodel.VisibleInfo = (notifications.Count == 0) ? Visibility.Visible : Visibility.Collapsed;
 
@@ -128,6 +130,8 @@ namespace PrismDemo
         };
 
     }
+
+
 #if WINDOWS_PHONE_APP
     StatusBarProgressIndicator progressbar;
     public async void ShowStatusBar(string text)

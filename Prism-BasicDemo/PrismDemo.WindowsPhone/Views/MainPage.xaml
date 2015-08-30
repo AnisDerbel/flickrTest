@@ -24,7 +24,6 @@
         
         <Grid Grid.Row="1">
 
-
             <GridView Grid.Row="1" IsItemClickEnabled="True" SelectionMode="None" ItemTemplate="{StaticResource DataPhoto}" ItemsSource="{Binding ListPhoto}" >
               
             <GridView.ItemsPanel>

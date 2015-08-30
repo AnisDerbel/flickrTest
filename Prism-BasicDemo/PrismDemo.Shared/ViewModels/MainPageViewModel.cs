@@ -22,9 +22,12 @@ namespace PrismDemo.ViewModels
     {
         #region declarations
 
-      
+
         public DelegateCommand SearchCommand { get; private set; }
         public ICommand Selectionphoto { get; set; }
+
+        private readonly INavigationService _navigationService;
+        private readonly IServicesPhoto _servicesPhoto;
 
         #endregion
 
@@ -43,7 +46,7 @@ namespace PrismDemo.ViewModels
             }
         }
 
-      
+
 
 
         public List<Photo> _listphoto;
@@ -88,7 +91,7 @@ namespace PrismDemo.ViewModels
 
 
         private Visibility _visibleProgress = Visibility.Visible;
-         public Visibility VisibleProgress
+        public Visibility VisibleProgress
         {
             get { return _visibleProgress; }
             set
@@ -99,7 +102,7 @@ namespace PrismDemo.ViewModels
         }
 
         private Visibility _visibleInfo = Visibility.Collapsed;
-         public Visibility VisibleInfo
+        public Visibility VisibleInfo
         {
             get { return _visibleInfo; }
             set
@@ -130,19 +133,18 @@ namespace PrismDemo.ViewModels
             }
         }
 
-     
+
 
         #endregion
 
-        private  void LoadContents(string _searchPhoto)
+        private void LoadContents(string _searchPhoto)
         {
-            ListPhoto = new IncrementalLoadingNotificationsCollection(_servicesPhoto, _searchPhoto,this);
+            ListPhoto = new IncrementalLoadingNotificationsCollection(_servicesPhoto, _searchPhoto, this);
         }
 
-        private readonly INavigationService _navigationService;
-        private readonly IServicesPhoto _servicesPhoto;
 
-        public MainPageViewModel(INavigationService navigationService,IServicesPhoto servicephoto)
+        #region Constructor
+        public MainPageViewModel(INavigationService navigationService, IServicesPhoto servicephoto)
         {
             _navigationService = navigationService;
             _servicesPhoto = servicephoto;
@@ -161,7 +163,7 @@ namespace PrismDemo.ViewModels
                         break;
 
                     case Visibility.Visible:
-                          SearchVisible = Visibility.Collapsed;
+                        SearchVisible = Visibility.Collapsed;
                         LabelBar = "search";
                         IconBar = new SymbolIcon(Symbol.Find);
                         SearchPhoto = "";
@@ -173,16 +175,8 @@ namespace PrismDemo.ViewModels
 
             });
         }
+        #endregion
 
-        private void OnSelectionPhoto(ItemClickEventArgs obj)
-        {
-            if(obj.ClickedItem!=null)
-            {
-                Photo selectedphoto = obj.ClickedItem as Photo;
-                _navigationService.Navigate("Pivot", selectedphoto.id);
-            }
-        }
-      
         public async override void OnNavigatedTo(object navigationParameter, NavigationMode navigationMode, Dictionary<string, object> viewModelState)
         {
 
@@ -191,47 +185,25 @@ namespace PrismDemo.ViewModels
 
             if (Statique.ConnectedToInternet())
             {
-                ListPhoto = new IncrementalLoadingNotificationsCollection(_servicesPhoto,"",this);
+                ListPhoto = new IncrementalLoadingNotificationsCollection(_servicesPhoto, "", this);
             }
             else
             {
                 MessageDialog msg = new MessageDialog("Please check your network!");
-                await  msg.ShowAsync();
+                await msg.ShowAsync();
             }
-            //if (Statique.ConnectedToInternet())
-            //{
-
-
-            //    Statique.listphotodesc = await _servicesPhoto.GetRecentPhoto();
-
-            //    if (Statique.listphotodesc != null || Statique.listphotodesc.Count!=0)
-            //    {
-
-            //        Listphoto = null;
-            //        Listphoto = Statique.listphotodesc;
-            //        VisibleProgress = Visibility.Collapsed;
-            //    }
-
-            //    else
-            //    {
-            //        MessageDialog msg = new MessageDialog("An error has occured!");
-            //        await msg.ShowAsync();
-            //    }
-            //}
-            //else
-            //{
-            //    MessageDialog msg = new MessageDialog("Please check your network!");
-            //    await  msg.ShowAsync();
-            //}
-
-
-         }
-
-        
 
         }
 
-
+        //selecting photo from the gridview
+        private void OnSelectionPhoto(ItemClickEventArgs obj)
+        {
+            if (obj.ClickedItem != null)
+            {
+                Photo selectedphoto = obj.ClickedItem as Photo;
+                _navigationService.Navigate("Pivot", selectedphoto.id);
+            }
+        }
     }
-
+}
 

@@ -12,6 +12,9 @@ namespace PrismDemo
        public static List<Photo> listphotodesc = new List<Photo>();
        public static int selectedpos;
       
+
+
+       //always check for network before hitting the api
        internal static bool ConnectedToInternet()
        {
            try

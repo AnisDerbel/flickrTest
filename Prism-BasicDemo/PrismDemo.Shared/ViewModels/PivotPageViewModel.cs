@@ -19,11 +19,20 @@ using PrismDemo.Services;
 namespace PrismDemo.ViewModels
 {
    public class PivotPageViewModel : ViewModel
-    {
-
-       public ICommand PhotoChanged { get; set; }
-
+   {
+       #region declarations
+       //commands
+        public ICommand PhotoChanged { get; set; }
         public DelegateCommand MapCommand { get; set; }
+       //services
+        private readonly INavigationService _navigationService;
+        private readonly IServicesPhoto _servicesPhoto;
+       //variables
+        Photo selectedphoto;
+        Location selectedlocation;
+       #endregion
+
+        #region Getter & Setter
         public List<Photo> _listphoto;
         public List<Photo> Listphoto
         {
@@ -61,12 +70,12 @@ namespace PrismDemo.ViewModels
                 SetProperty(ref _visibleMap, value);
             }
         }
+        #endregion
 
 
-         private readonly INavigationService _navigationService;
-         private readonly IServicesPhoto _servicesPhoto;
 
-         public PivotPageViewModel(INavigationService navigationService, IServicesPhoto servicephoto)
+        #region Constructor
+        public PivotPageViewModel(INavigationService navigationService, IServicesPhoto servicephoto)
          {
              _navigationService = navigationService;
              _servicesPhoto = servicephoto;
@@ -78,8 +87,43 @@ namespace PrismDemo.ViewModels
                  _navigationService.Navigate("Map", selectedlocation);
              });
          }
+        #endregion
 
-         private async void OnPhotoChanged(SelectionChangedEventArgs obj)
+        public async override void OnNavigatedTo(object navigationParameter, NavigationMode navigationMode, Dictionary<string, object> viewModelState)
+        {
+
+            if (navigationMode == NavigationMode.Back)
+            {
+                Listphoto = Statique.listphotodesc;
+                SelectedPos = Statique.selectedpos;
+                VisibleMap = Visibility.Visible;
+                return;
+            }
+
+
+            string id = navigationParameter as string;
+            selectedlocation = new Location();
+            selectedphoto = Statique.listphotodesc.Where(x => x.id == id).ToList().FirstOrDefault();
+
+
+            Listphoto = Statique.listphotodesc;
+
+            Statique.selectedpos = Listphoto.IndexOf(selectedphoto);
+            SelectedPos = Statique.selectedpos;
+            if ((selectedlocation = await _servicesPhoto.CheckforGeolocation(selectedphoto.id)) != null)
+            {
+                VisibleMap = Visibility.Visible;
+            }
+            else
+            {
+                VisibleMap = Visibility.Collapsed;
+
+            }
+
+
+        }
+       // on swipping photo
+        private async void OnPhotoChanged(SelectionChangedEventArgs obj)
          {
              if (obj.AddedItems.Count > 0)
              {
@@ -99,44 +143,6 @@ namespace PrismDemo.ViewModels
                   
              }
          }
-         Photo selectedphoto;
-         Location selectedlocation;
-         public async override void OnNavigatedTo(object navigationParameter, NavigationMode navigationMode, Dictionary<string, object> viewModelState)
-         {
-
-             if (navigationMode == NavigationMode.Back)
-             {
-                 Listphoto = Statique.listphotodesc;
-                 SelectedPos = Statique.selectedpos;
-                 VisibleMap = Visibility.Visible;
-                 return;
-             }
-                
-
-               string id = navigationParameter as string;
-               selectedlocation = new Location();
-              selectedphoto = Statique.listphotodesc.Where(x => x.id == id).ToList().FirstOrDefault();
-
-            //  Listphoto = null;
-             Listphoto = Statique.listphotodesc;
-           
-             Statique.selectedpos = Listphoto.IndexOf(selectedphoto);
-             SelectedPos = Statique.selectedpos;
-             if ((selectedlocation = await _servicesPhoto.CheckforGeolocation(selectedphoto.id))!=null)
-             {
-                 VisibleMap = Visibility.Visible;
-             }
-             else
-             {
-                 VisibleMap = Visibility.Collapsed;
-
-             }
-          
-          
-         }
-
-       
-    
-
+      
     }
 }
