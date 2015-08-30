@@ -139,6 +139,8 @@ namespace PrismDemo.ViewModels
 
         private void LoadContents(string _searchPhoto)
         {
+            Statique.listphotodesc = new List<Photo>();
+            Listphoto = null;
             ListPhoto = new IncrementalLoadingNotificationsCollection(_servicesPhoto, _searchPhoto, this);
         }
 

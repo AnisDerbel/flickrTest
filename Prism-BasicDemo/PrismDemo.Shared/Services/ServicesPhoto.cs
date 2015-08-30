@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
+using System.Linq;
 
 namespace PrismDemo.Services
 {
@@ -29,7 +30,7 @@ namespace PrismDemo.Services
                 "&format=json"+
                 "&nojsoncallback=1"+
                 "&page="+count+
-                "&per_page=50";
+                "&per_page=10";
 
             try
             {
@@ -74,7 +75,6 @@ namespace PrismDemo.Services
       // search photo by an input text from the user.
         public async Task<List<Photo>> SearchPhoto(int count, string searchphoto)
         {
-
             double widh = 500;
             FlickrData flickrdata;
 
@@ -89,7 +89,7 @@ namespace PrismDemo.Services
             "&format=json"+
             "&nojsoncallback=1"+
             "&page=" + count + 
-            "&per_page=50";
+            "&per_page=10";
 
             try
             {
@@ -112,7 +112,7 @@ namespace PrismDemo.Services
                         item.width = widh / 2 - 10;
                         item.search = true;
 
-                        Statique.listphotodesc.Add(item);
+                       Statique.listphotodesc.Add(item);
 
 
                     }
