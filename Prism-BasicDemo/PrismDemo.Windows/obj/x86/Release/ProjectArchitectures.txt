@@ -1,1 +1,1 @@
-C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\PrismDemo.Windows.csproj;x86
+C:\Users\Anis Derbel\Documents\flickrTest\Prism-BasicDemo\PrismDemo.Windows\PrismDemo.Windows.csproj;x86

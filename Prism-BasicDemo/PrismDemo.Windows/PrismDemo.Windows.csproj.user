@@ -6,6 +6,6 @@
     <AppxBuildConfigurationSelection>x86</AppxBuildConfigurationSelection>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <UseSimulator>true</UseSimulator>
+    <UseSimulator>false</UseSimulator>
   </PropertyGroup>
 </Project>
