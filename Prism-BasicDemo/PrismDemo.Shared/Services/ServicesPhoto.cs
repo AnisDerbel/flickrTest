@@ -12,7 +12,7 @@ namespace PrismDemo.Services
 {
   public  class ServicesPhoto : IServicesPhoto
     {
-         // get recent photo from flickr api per 50 photos
+         // get recent photo from flickr api per 10 photos
         public async Task<List<Models.Photo>> GetRecentPhoto(int count)
         {
             double widh = 500;
