@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ANIS-PC</Machine>
+    <WindowsUser>Anis Derbel</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>95357916-5937-4c5e-b3d8-fbf3d94347e6</PackageIdentityName>
+    <IntermediateOutputPath>C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>B01C190E9360283BC5047B4366CFEB6E4184F06755FAE15BB9732F942A39DF85</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>95357916-5937-4c5e-b3d8-fbf3d94347e6_1.0.0.0_neutral__e8f4dqfvn1be6</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>95357916-5937-4c5e-b3d8-fbf3d94347e6_e8f4dqfvn1be6!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>95357916-5937-4c5e-b3d8-fbf3d94347e6</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=mpagani</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-08-29T22:29:31.411</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\PrismDemo.Windows.exe">
+      <PackagePath>PrismDemo.Windows.exe</PackagePath>
+      <Modified>2015-08-29T22:29:30.589</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.Mvvm.dll">
+      <PackagePath>Microsoft.Practices.Prism.Mvvm.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.622</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.Mvvm.Store.dll">
+      <PackagePath>Microsoft.Practices.Prism.Mvvm.Store.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.623</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Prism.Mvvm.1.1.1\lib\windows8\Microsoft.Practices.Prism.SharedInterfaces.dll">
+      <PackagePath>Microsoft.Practices.Prism.SharedInterfaces.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.627</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Prism.StoreApps.2.0.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.724</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Prism.StoreApps.2.0.0\lib\windows8\Microsoft.Practices.Prism.StoreApps.Windows.dll">
+      <PackagePath>Microsoft.Practices.Prism.StoreApps.Windows.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.728</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Unity.3.5.1405-prerelease\lib\win8\Microsoft.Practices.Unity.dll">
+      <PackagePath>Microsoft.Practices.Unity.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\packages\Unity.3.5.1405-prerelease\lib\win8\Microsoft.Practices.Unity.RegistrationByConvention.dll">
+      <PackagePath>Microsoft.Practices.Unity.RegistrationByConvention.dll</PackagePath>
+      <Modified>2015-08-27T13:12:22.888</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prismewindows\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2014-04-29T06:23:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prismewindows\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2014-04-29T06:23:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anis Derbel\Desktop\Windowdll\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2015-06-12T11:59:38.547</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-23T22:40:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-23T22:40:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-23T22:40:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-03-23T22:40:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-08-29T22:29:30.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\PhotoControl.xbf">
+      <PackagePath>PhotoControl.xbf</PackagePath>
+      <Modified>2015-08-29T19:41:05.786</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\Views\BasicPage1.xbf">
+      <PackagePath>Views\BasicPage1.xbf</PackagePath>
+      <Modified>2015-08-29T19:56:01.627</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\Views\MainPage.xbf">
+      <PackagePath>Views\MainPage.xbf</PackagePath>
+      <Modified>2015-08-29T22:29:30.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\Views\MapPage.xbf">
+      <PackagePath>Views\MapPage.xbf</PackagePath>
+      <Modified>2015-08-29T19:41:05.786</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\Views\PivotPage.xbf">
+      <PackagePath>Views\PivotPage.xbf</PackagePath>
+      <Modified>2015-08-29T22:29:30.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\PrismDemo.Windows.xr.xml">
+      <PackagePath>PrismDemo.Windows.xr.xml</PackagePath>
+      <Modified>2015-08-29T22:27:34.645</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Prism-UniversalSample-master - Copy\Prism-UniversalSample-master\Prism-BasicDemo\PrismDemo.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-08-29T22:29:31.121</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
