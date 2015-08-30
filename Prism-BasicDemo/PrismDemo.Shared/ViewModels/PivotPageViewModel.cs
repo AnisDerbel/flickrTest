@@ -105,8 +105,11 @@ namespace PrismDemo.ViewModels
             selectedlocation = new Location();
             selectedphoto = Statique.listphotodesc.Where(x => x.id == id).ToList().FirstOrDefault();
 
+            if(Statique.issearch)
+            Listphoto = Statique.listphotodesc.Where(x=> x.search == true).ToList();
+            else
+            Listphoto = Statique.listphotodesc.Where(x => x.search == false).ToList();
 
-            Listphoto = Statique.listphotodesc;
 
             Statique.selectedpos = Listphoto.IndexOf(selectedphoto);
             SelectedPos = Statique.selectedpos;

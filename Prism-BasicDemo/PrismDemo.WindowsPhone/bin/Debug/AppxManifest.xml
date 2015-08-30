@@ -23,9 +23,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="PrismDemo.WindowsPhone.exe" EntryPoint="PrismDemo.WindowsPhone.App">
-      <m3:VisualElements DisplayName="PrismDemo.WindowsPhone" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="PrismDemo.WindowsPhone" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png" />
-        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      <m3:VisualElements DisplayName="flickR" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="flickR" ForegroundText="light" BackgroundColor="turquoise">
+        <m3:DefaultTile Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="turquoise" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
       </m3:VisualElements>
     </Application>
   </Applications>

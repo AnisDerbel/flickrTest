@@ -11,6 +11,7 @@ namespace PrismDemo
     {
        public static List<Photo> listphotodesc = new List<Photo>();
        public static int selectedpos;
+       public static bool issearch;
       
 
 

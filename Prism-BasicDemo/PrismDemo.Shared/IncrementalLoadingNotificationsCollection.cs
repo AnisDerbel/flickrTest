@@ -69,12 +69,19 @@ namespace PrismDemo
         {
            if(_searchphoto=="")
            {
+               Statique.issearch = false;
+               var list = Statique.listphotodesc.Where(x => x.search == true).ToList();
+               foreach (var item in list)
+               {
+                   Remove(item);
+               }
                // get recent photo without searching
                notifications = await _notificationService.GetRecentPhoto(_photoStartIndex);
 
            }
            else
            {
+               Statique.issearch = true;
                var list = Statique.listphotodesc.Where(x=> x.search == false).ToList();
                foreach (var item in list)
                {
